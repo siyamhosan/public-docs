@@ -1,20 +1,50 @@
-import Link from 'next/link';
-import { BookOpen, Github, Users, Gamepad2 } from 'lucide-react';
+import Link from "next/link";
+import { BookOpen, Github, Users, Gamepad2, AlertTriangle } from "lucide-react";
+import Image from "next/image";
 
 export default function HomePage() {
   return (
     <div className="flex flex-col justify-center items-center flex-1 min-h-screen px-4 py-16">
       <div className="max-w-4xl w-full space-y-8">
+        {/* Beta Notice */}
+        <div className="bg-amber-50 dark:bg-amber-950/20 border border-amber-200 dark:border-amber-800 rounded-lg p-4 mb-8">
+          <div className="flex items-start gap-3">
+            <AlertTriangle className="w-5 h-5 text-amber-600 dark:text-amber-400 flex-shrink-0 mt-0.5" />
+            <div>
+              <h3 className="font-semibold text-amber-800 dark:text-amber-200 mb-1">
+                Beta Documentation - Unofficial
+              </h3>
+              <p className="text-sm text-amber-700 dark:text-amber-300">
+                This documentation is currently in beta and is not officially
+                endorsed by Legacy Roleplay. Information may be incomplete or
+                subject to change. Please verify important details with official
+                sources.
+              </p>
+            </div>
+          </div>
+        </div>
+
         {/* Logo/Branding Section */}
         <div className="text-center space-y-4 mb-12">
-          <div className="inline-flex items-center justify-center w-24 h-24 rounded-full bg-gradient-to-br from-[#006A44] to-[#F42A41] mb-6 shadow-lg">
+          {/* <div className="inline-flex items-center justify-center w-24 h-24 rounded-full bg-gradient-to-br from-[#006A44] to-[#F42A41] mb-6 shadow-lg">
             <span className="text-4xl font-bold text-white">LP</span>
+          </div> */}
+          <div className="flex items-center justify-center">
+            <Image
+              src="/lrbd_logo.png"
+              alt="Legacy Roleplay Bangladesh"
+              className="w-24 h-24 rounded-full"
+              width={100}
+              height={100}
+            />
           </div>
           <h1 className="text-5xl font-bold bg-gradient-to-r from-[#006A44] to-[#F42A41] bg-clip-text text-transparent">
             Legacy Roleplay Bangladesh
           </h1>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Another "subdivision" of Legacy Roleplay: Bangladesh. A community-driven GTA V roleplay server focused on creating immersive, realistic roleplay experiences for the Bengali community.
+            Another "subdivision" of Legacy Roleplay: Bangladesh. A
+            community-driven GTA V roleplay server focused on creating
+            immersive, realistic roleplay experiences for the Bengali community.
           </p>
         </div>
 
@@ -116,19 +146,28 @@ export default function HomePage() {
           <h2 className="text-xl font-semibold mb-4">About the Community</h2>
           <div className="space-y-3 text-muted-foreground">
             <p>
-              Legacy Roleplay is an English community founded in early 2018. We have been asked to create a subdivision, aimed at players from Bangladesh. As we are open and intrigued by the new possibilities and opportunities.
+              Legacy Roleplay is an English community founded in early 2018. We
+              have been asked to create a subdivision, aimed at players from
+              Bangladesh. As we are open and intrigued by the new possibilities
+              and opportunities.
             </p>
             <p>
-              This "subdivision" of Legacy is owned by the main community, but is fully managed and controlled by others.
+              This "subdivision" of Legacy is owned by the main community, but
+              is fully managed and controlled by others.
             </p>
             <p>
-              We hope this allows for a better and more enjoyable experience for the Bengali part of our community, and provides a better environment for role play and growth.
+              We hope this allows for a better and more enjoyable experience for
+              the Bengali part of our community, and provides a better
+              environment for role play and growth.
             </p>
             <p>
-              FiveM servers are still hosted by the main community. This discord is also owned by the main community, but is controlled by another person.
+              FiveM servers are still hosted by the main community. This discord
+              is also owned by the main community, but is controlled by another
+              person.
             </p>
             <p>
-              The FiveM server database is not synchronized between the main server and this division.
+              The FiveM server database is not synchronized between the main
+              server and this division.
             </p>
           </div>
         </div>
