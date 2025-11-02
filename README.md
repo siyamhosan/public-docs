@@ -1,45 +1,112 @@
-# public-docs
+# Legacy Roleplay Documentation
 
-This is a Next.js application generated with
-[Create Fumadocs](https://github.com/fuma-nama/fumadocs).
+Open-source documentation website for the Legacy Roleplay GTA V server, built with [Fumadocs](https://fumadocs.dev) and Next.js.
 
-Run development server:
+## 🎮 About
+
+This documentation site serves as the central hub for all information about the Legacy Roleplay server. It's maintained by the community and open for contributions from anyone who wants to help improve the documentation.
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js 18+ 
+- pnpm (recommended) or npm/yarn
+
+### Installation
 
 ```bash
-npm run dev
+# Install dependencies
+pnpm install
 # or
-pnpm dev
-# or
-yarn dev
+npm install
 ```
 
-Open http://localhost:3000 with your browser to see the result.
+### Development
 
-## Explore
+Run the development server:
 
-In the project, you can see:
+```bash
+pnpm dev
+# or
+npm run dev
+```
 
-- `lib/source.ts`: Code for content source adapter, [`loader()`](https://fumadocs.dev/docs/headless/source-api) provides the interface to access your content.
-- `lib/layout.shared.tsx`: Shared options for layouts, optional but preferred to keep.
+Open [http://localhost:3000](http://localhost:3000) in your browser to see the result.
 
-| Route                     | Description                                            |
-| ------------------------- | ------------------------------------------------------ |
-| `app/(home)`              | The route group for your landing page and other pages. |
-| `app/docs`                | The documentation layout and pages.                    |
-| `app/api/search/route.ts` | The Route Handler for search.                          |
+### Building
 
-### Fumadocs MDX
+```bash
+pnpm build
+# or
+npm run build
+```
 
-A `source.config.ts` config file has been included, you can customise different options like frontmatter schema.
+## 📝 Contributing
 
-Read the [Introduction](https://fumadocs.dev/docs/mdx) for further details.
+This documentation is **open source** and community-driven! We welcome contributions from everyone.
 
-## Learn More
+### How to Contribute
 
-To learn more about Next.js and Fumadocs, take a look at the following
-resources:
+1. **Fork the repository** on GitHub
+2. **Create a branch** for your changes
+3. **Make your edits** to the documentation files in `/content/docs`
+4. **Test locally** by running `pnpm dev`
+5. **Submit a pull request** with a clear description of your changes
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js
-  features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-- [Fumadocs](https://fumadocs.dev) - learn about Fumadocs
+### Documentation Structure
+
+- `/content/docs` - All documentation content (MDX files)
+- `/src/app/docs` - Documentation layout and pages
+- `/src/lib` - Shared utilities and configuration
+
+### Adding New Documentation
+
+Simply create a new `.mdx` file in `/content/docs` with frontmatter:
+
+```mdx
+---
+title: Your Page Title
+description: Brief description
+---
+
+Your content here...
+```
+
+## 🎨 Theme
+
+The site uses a custom theme based on BD flag colors:
+- **Primary Green**: `#006A44` (BD Flag Green)
+- **Accent Red**: `#F42A41` (BD Flag Red)
+
+Theme colors can be customized in `/src/app/global.css`.
+
+## 📚 Features
+
+- ✨ Modern, responsive design
+- 🔍 Built-in search functionality
+- 🌙 Dark mode support
+- 📱 Mobile-friendly
+- 🔗 GitHub integration for contributions
+- 📖 MDX support for rich content
+
+## 🛠️ Tech Stack
+
+- [Next.js](https://nextjs.org) - React framework
+- [Fumadocs](https://fumadocs.dev) - Documentation framework
+- [Tailwind CSS](https://tailwindcss.com) - Styling
+- [TypeScript](https://www.typescriptlang.org) - Type safety
+
+## 📄 License
+
+This project is open source and available for the community to use and improve.
+
+## 🔗 Links
+
+- Documentation: [View Site](#)
+- Discord: [Join Server](#)
+- GitHub: [Repository](#)
+
+---
+
+Made with ❤️ for the Legacy Roleplay community

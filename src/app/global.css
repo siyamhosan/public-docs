@@ -1,3 +1,66 @@
-@import 'tailwindcss';
-@import 'fumadocs-ui/css/neutral.css';
-@import 'fumadocs-ui/css/preset.css';
+@import "tailwindcss";
+@import "fumadocs-ui/css/default.css";
+@import "fumadocs-ui/css/preset.css";
+
+@theme {
+  /* Legacy Roleplay Theme - BD Flag Colors */
+  /* Primary Green: #006A44 (BD Flag Green) */
+  /* Accent Red: #F42A41 (BD Flag Red) */
+  /* Improved contrast ratios for better readability (WCAG AA+) */
+
+  --color-fd-background: hsl(0, 0%, 100%);
+  --color-fd-primary: hsl(
+    150,
+    100%,
+    18%
+  ); /* Darker BD Green for better contrast */
+  --color-fd-border: hsla(150, 15%, 85%, 0.5);
+  --color-fd-accent: hsl(350, 90%, 52%); /* BD Red */
+  --color-fd-accent-foreground: hsl(0, 0%, 100%);
+  --color-fd-muted: hsl(150, 20%, 96%);
+  --color-fd-muted-foreground: hsl(
+    150,
+    10%,
+    45%
+  ); /* Darker for better contrast */
+  --color-fd-foreground: hsl(
+    150,
+    30%,
+    10%
+  ); /* Darker text for better readability */
+  --color-fd-secondary: hsl(150, 25%, 94%);
+  --color-fd-secondary-foreground: hsl(150, 40%, 12%); /* Darker for contrast */
+  --color-fd-card: hsl(0, 0%, 100%);
+  --color-fd-card-foreground: hsl(150, 30%, 10%); /* Darker text */
+  --color-fd-popover-foreground: hsl(150, 30%, 10%);
+  --color-fd-popover: hsl(0, 0%, 100%);
+  --color-fd-primary-foreground: hsl(0, 0%, 100%);
+  --color-fd-ring: hsl(150, 100%, 18%);
+}
+
+.dark {
+  --color-fd-background: hsl(150, 20%, 8%);
+  --color-fd-primary: hsl(
+    150,
+    65%,
+    50%
+  ); /* Brighter BD Green for better contrast */
+  --color-fd-border: hsla(150, 20%, 30%, 0.5);
+  --color-fd-accent: hsl(350, 45%, 46%); /* Brighter BD Red */
+  --color-fd-accent-foreground: hsl(0, 0%, 100%);
+  --color-fd-muted: hsl(150, 15%, 14%);
+  --color-fd-foreground: hsl(150, 15%, 95%); /* Very light text for dark bg */
+  --color-fd-muted-foreground: hsl(
+    150,
+    10%,
+    75%
+  ); /* Lighter for better contrast */
+  --color-fd-secondary: hsl(150, 20%, 18%);
+  --color-fd-secondary-foreground: hsl(150, 15%, 95%); /* Very light text */
+  --color-fd-card: hsl(150, 20%, 12%);
+  --color-fd-card-foreground: hsl(150, 15%, 95%); /* Very light text */
+  --color-fd-popover-foreground: hsl(150, 15%, 95%);
+  --color-fd-popover: hsl(150, 20%, 10%);
+  --color-fd-primary-foreground: hsl(0, 0%, 100%);
+  --color-fd-ring: hsl(150, 65%, 50%);
+}
