@@ -10,15 +10,17 @@ export async function GET(
   { params }: RouteContext<'/og/docs/[...slug]'>,
 ) {
   const { slug } = await params;
-  const page = source.getPage(slug.slice(0, -1));
+  // Remove 'image.png' from the end to get the page slug
+  const pageSlug = slug.slice(0, -1);
+  const page = source.getPage(pageSlug);
   if (!page) notFound();
 
   return new ImageResponse(
     (
       <DefaultImage
         title={page.data.title}
-        description={page.data.description}
-        site="My App"
+        description={page.data.description || 'Legacy Roleplay Bangladesh Documentation'}
+        site="Legacy Roleplay Bangladesh"
       />
     ),
     {

@@ -1,6 +1,33 @@
 import Link from "next/link";
 import { BookOpen, Github, Users, Gamepad2, AlertTriangle } from "lucide-react";
 import Image from "next/image";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Home",
+  description:
+    "Welcome to Legacy Roleplay Bangladesh documentation. Browse comprehensive guides, rules, and getting started tutorials for our community-driven GTA V roleplay server.",
+  openGraph: {
+    title: "Legacy Roleplay Bangladesh - Documentation",
+    description:
+      "Welcome to Legacy Roleplay Bangladesh documentation. Browse comprehensive guides, rules, and getting started tutorials for our community-driven GTA V roleplay server.",
+    images: [
+      {
+        url: "/og/docs/image.png",
+        width: 1200,
+        height: 630,
+        alt: "Legacy Roleplay Bangladesh Documentation",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Legacy Roleplay Bangladesh - Documentation",
+    description:
+      "Welcome to Legacy Roleplay Bangladesh documentation. Browse comprehensive guides, rules, and getting started tutorials.",
+    images: ["/og/docs/image.png"],
+  },
+};
 
 export default function HomePage() {
   return (

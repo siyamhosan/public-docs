@@ -44,11 +44,37 @@ export async function generateMetadata(
   const page = source.getPage(params.slug);
   if (!page) notFound();
 
+  const ogImage = getPageImage(page).url;
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://docs.lrbd.xyz';
+  const pageUrl = `${siteUrl}/docs/${params.slug?.join('/') || ''}`;
+
   return {
     title: page.data.title,
-    description: page.data.description,
+    description: page.data.description || 'Legacy Roleplay Bangladesh Documentation',
+    alternates: {
+      canonical: pageUrl,
+    },
     openGraph: {
-      images: getPageImage(page).url,
+      title: page.data.title,
+      description: page.data.description || 'Legacy Roleplay Bangladesh Documentation',
+      url: pageUrl,
+      siteName: 'Legacy Roleplay Bangladesh',
+      images: [
+        {
+          url: ogImage,
+          width: 1200,
+          height: 630,
+          alt: page.data.title,
+        },
+      ],
+      locale: 'en_US',
+      type: 'article',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: page.data.title,
+      description: page.data.description || 'Legacy Roleplay Bangladesh Documentation',
+      images: [ogImage],
     },
   };
 }
